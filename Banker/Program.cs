@@ -59,79 +59,79 @@ namespace Banker
 
             Process.numberOfResources = numberOfResources;
 
-            //for (int i = 0; i < numberOfProcesses; i++)
-            //{
-            //    int[] allocationArr = new int[numberOfResources];
-            //    int[] maxArr = new int[numberOfResources];
-            //    Array.Clear(allocationArr, 0, numberOfResources);
-            //    Array.Clear(maxArr, 0, numberOfResources);
+            for (int i = 0; i < numberOfProcesses; i++)
+            {
+                int[] allocationArr = new int[numberOfResources];
+                int[] maxArr = new int[numberOfResources];
+                Array.Clear(allocationArr, 0, numberOfResources);
+                Array.Clear(maxArr, 0, numberOfResources);
 
-            //    for (int j = 0; j < numberOfResources; j++)
-            //    {
-            //        Console.Write("Please Enter Allocation Of Resource " + (j + 1) + " Of Process " + (i + 1) + ":");
-            //        allocationArr[j] = Convert.ToInt32(Console.ReadLine());
-
-
-
-            //    }
-
-            //    for (int j = 0; j < numberOfResources; j++)
-            //    {
+                for (int j = 0; j < numberOfResources; j++)
+                {
+                    Console.Write("Please Enter Allocation Of Resource " + j  + " Of Process " + i  + ":");
+                    allocationArr[j] = Convert.ToInt32(Console.ReadLine());
 
 
-            //        Console.Write("Please Enter Max Of Resource " + (j + 1) + " Of Process " + (i + 1) + ":");
-            //        maxArr[j] = Convert.ToInt32(Console.ReadLine());
-            //    }
+
+                }
+
+                for (int j = 0; j < numberOfResources; j++)
+                {
 
 
-            //    processesArr[i] = new Process(allocationArr, maxArr);
+                    Console.Write("Please Enter Max Of Resource " + j + " Of Process " + i  + ":");
+                    maxArr[j] = Convert.ToInt32(Console.ReadLine());
+                }
 
-            //}
-            processesArr[0] = new Process();
-            processesArr[1] = new Process();
-            processesArr[2] = new Process();
-            processesArr[3] = new Process();
-            processesArr[4] = new Process();
 
-            resourcesArr[0] = new Resource();
-            resourcesArr[1] = new Resource();
-            resourcesArr[2] = new Resource();
+                processesArr[i] = new Process(allocationArr, maxArr);
 
-            processesArr[0].Allocation[0] = 0 ;
-            processesArr[0].Allocation[1] = 1;
-            processesArr[0].Allocation[2] = 0;
-            processesArr[1].Allocation[0] = 2;
-            processesArr[1].Allocation[1] = 0;
-            processesArr[1].Allocation[2] = 0;
-            processesArr[2].Allocation[0] = 3;
-            processesArr[2].Allocation[1] = 0;
-            processesArr[2].Allocation[2] = 2;
-            processesArr[3].Allocation[0] = 2;
-            processesArr[3].Allocation[1] = 1;
-            processesArr[3].Allocation[2] = 1;
-            processesArr[4].Allocation[0] = 0;
-            processesArr[4].Allocation[1] = 0;
-            processesArr[4].Allocation[2] = 2;
+            }
+            //processesArr[0] = new Process();
+            //processesArr[1] = new Process();
+            //processesArr[2] = new Process();
+            //processesArr[3] = new Process();
+            //processesArr[4] = new Process();
 
-            processesArr[0].Max[0] = 7;
-            processesArr[0].Max[1] = 5;
-            processesArr[0].Max[2] = 3;
-            processesArr[1].Max[0] = 3;
-            processesArr[1].Max[1] = 2;
-            processesArr[1].Max[2] = 2;
-            processesArr[2].Max[0] = 9;
-            processesArr[2].Max[1] = 0;
-            processesArr[2].Max[2] = 2;
-            processesArr[3].Max[0] = 2;
-            processesArr[3].Max[1] = 2;
-            processesArr[3].Max[2] = 2;
-            processesArr[4].Max[0] = 4;
-            processesArr[4].Max[1] = 3;
-            processesArr[4].Max[2] = 3;
+            //resourcesArr[0] = new Resource();
+            //resourcesArr[1] = new Resource();
+            //resourcesArr[2] = new Resource();
 
-            resourcesArr[0].Available = 3;
-            resourcesArr[1].Available = 3;
-            resourcesArr[2].Available = 2;
+            //processesArr[0].Allocation[0] = 0 ;
+            //processesArr[0].Allocation[1] = 1;
+            //processesArr[0].Allocation[2] = 0;
+            //processesArr[1].Allocation[0] = 2;
+            //processesArr[1].Allocation[1] = 0;
+            //processesArr[1].Allocation[2] = 0;
+            //processesArr[2].Allocation[0] = 3;
+            //processesArr[2].Allocation[1] = 0;
+            //processesArr[2].Allocation[2] = 2;
+            //processesArr[3].Allocation[0] = 2;
+            //processesArr[3].Allocation[1] = 1;
+            //processesArr[3].Allocation[2] = 1;
+            //processesArr[4].Allocation[0] = 0;
+            //processesArr[4].Allocation[1] = 0;
+            //processesArr[4].Allocation[2] = 2;
+
+            //processesArr[0].Max[0] = 7;
+            //processesArr[0].Max[1] = 5;
+            //processesArr[0].Max[2] = 3;
+            //processesArr[1].Max[0] = 3;
+            //processesArr[1].Max[1] = 2;
+            //processesArr[1].Max[2] = 2;
+            //processesArr[2].Max[0] = 9;
+            //processesArr[2].Max[1] = 0;
+            //processesArr[2].Max[2] = 2;
+            //processesArr[3].Max[0] = 2;
+            //processesArr[3].Max[1] = 2;
+            //processesArr[3].Max[2] = 2;
+            //processesArr[4].Max[0] = 4;
+            //processesArr[4].Max[1] = 3;
+            //processesArr[4].Max[2] = 3;
+
+            //resourcesArr[0].Available = 3;
+            //resourcesArr[1].Available = 3;
+            //resourcesArr[2].Available = 2;
 
             for (int i = 0; i < numberOfProcesses; i++)
             {
@@ -150,16 +150,16 @@ namespace Banker
 
 
             }
+            int[] availableArr = new int[numberOfResources];
+            for (int i = 0; i < numberOfResources; i++)
+            {
 
-            //for (int i = 0; i < numberOfResources; i++)
-            //{
 
-
-            //    int avl;
-            //    Console.Write("Please Enter Available Of Resource " + (i + 1) + ":");
-            //    avl = Convert.ToInt32(Console.ReadLine());
-            //    resourcesArr[i] = new Resource(avl);
-            //}
+                int avl;
+                Console.Write("Please Enter Available Of Resource " + i + ":");
+                availableArr[i] = Convert.ToInt32(Console.ReadLine());
+                resourcesArr[i] = new Resource(availableArr[i]);
+            }
 
             MainClass.printNeed(processesArr, numberOfProcesses, numberOfResources);
 
@@ -238,10 +238,12 @@ namespace Banker
             if (q2Answer == "yes" || q2Answer == "y" || q2Answer == "Yes" || q2Answer == "YES" || q2Answer == "Y")
             {
                 numberOfRemainProcesses = numberOfProcesses;
-                resourcesArr[0].Available = 3;
-                resourcesArr[1].Available = 3;
-                resourcesArr[2].Available = 2;
-               for(int i =0; i< numberOfProcesses;i++)
+                for (int i = 0; i < numberOfResources; i++)
+                {
+                    resourcesArr[i].Available = availableArr[i];
+                }
+
+                for (int i =0; i< numberOfProcesses;i++)
                 {
                     processesArr[i].Status = "active";
                 }
