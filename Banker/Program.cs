@@ -25,7 +25,7 @@ namespace Banker
             for (int i = 0; i < numberOfProcesses; i++)
             {
 
-                Console.Write("P" + (i + 1) + "   ");
+                Console.Write("P" + i  + "   ");
 
                 for (int j = 0; j < numberOfResources; j++)
                 {
@@ -33,6 +33,7 @@ namespace Banker
 
 
                 }
+
 
                 Console.Write("\n");
 
@@ -77,7 +78,7 @@ namespace Banker
                     string[] lineValues = tmp.Split(' ');
                     for (int j = 0; j < numberOfResources; j++)
                     {
-                        maxArr[j] = Convert.ToInt32(lineValues[j]);
+                         maxArr[j] = Convert.ToInt32(lineValues[j]);
                     }
                     processesArr[i] = new Process();
                     processesArr[i].Max = maxArr;
@@ -306,7 +307,7 @@ namespace Banker
                     }
                     else
                     {
-                        Console.Write("No your request can't be granted.");
+                        Console.WriteLine("No your request can't be granted.");
 
                     }
                 }
