@@ -180,6 +180,8 @@ namespace Banker
 
                     if (safeStateBool)
                     {
+                        Console.Write("\n");
+
                         Console.Write("Yes , Safe state <");
 
                         for (int j = 0; j < numberOfProcesses; j++)
@@ -196,7 +198,11 @@ namespace Banker
                     }
                     else
                     {
+                        Console.Write("\n");
+
                         Console.WriteLine("No, It is Not Safe.");
+                        Console.Write("\n");
+
                     }
                 }
 
@@ -287,6 +293,8 @@ namespace Banker
 
                     if (safeStateBoolIR)
                     {
+                        Console.Write("\n");
+
                         Console.Write("Yes request can be granted with safe state, Safe state <");
                         Console.Write("P"+ numberOfProccessIR+"req,");
 
@@ -307,13 +315,21 @@ namespace Banker
                     }
                     else
                     {
+                        Console.Write("\n");
+
                         Console.WriteLine("No your request can't be granted.");
+                        Console.Write("\n");
+
 
                     }
                 }
                 else
                 {
+                    Console.Write("\n");
+
                     Console.WriteLine("Wrong Input.");
+                    Console.Write("\n");
+
                 }
 
 
